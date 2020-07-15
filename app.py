@@ -679,4 +679,4 @@ def serve_imageSA_s5(image_path):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=False)
