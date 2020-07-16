@@ -82,14 +82,14 @@ app = dash.Dash(__name__)
 
 # Section for Google analytics
 
-# if 'DYNO' in os.environ:
-#     app.scripts.config.serve_locally = False
-#     app.scripts.append_script({
-#         'external_url': 'https://raw.githubusercontent.com/csblab/covid-dashboard/master/assets/async_tag.js'
-#     })
-#     app.scripts.append_script({
-#         'external_url': 'https://raw.githubusercontent.com/csblab/covid-dashboard/master/assets/gtag.js'
-#     })
+if 'DYNO' in os.environ:
+    app.scripts.config.serve_locally = False
+    app.scripts.append_script({
+        'external_url': 'https://raw.githubusercontent.com/csblab/covid-dashboard-2/master/assets/async_tag.js'
+    })
+    app.scripts.append_script({
+        'external_url': 'https://raw.githubusercontent.com/csblab/covid-dashboard-2/master/assets/gtag.js'
+    })
 
 server = app.server #for server deployment
 app.scripts.config.serve_locally = True
