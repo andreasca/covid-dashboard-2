@@ -199,7 +199,7 @@ app.layout =  html.Div([
                                         xs=6,
                                         lg=6,
                                         children=[
-                                            html.H3('Unsmoothed data'),
+                                            html.H3('Raw data'),
                                                 dcc.Dropdown(
                                                     id='image-dropdownWorld1',
                                                     options=[{'label': i, 'value': i} for i in list_of_images_world_un],
@@ -262,7 +262,7 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Unsmoothed data'),
+                                                html.H3('Raw data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownUS1',
                                                         options=[{'label': i, 'value': i} for i in list_of_images_us_un],
@@ -326,7 +326,7 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Unsmoothed data'),
+                                                html.H3('Raw data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownIT1',
                                                         options=[{'label': i, 'value': i} for i in list_of_images_italy_un],
@@ -391,7 +391,7 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Unsmoothed data'),
+                                                html.H3('Raw data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownCA1',
                                                         options=[{'label': i, 'value': i} for i in list_of_images_canada_un],
@@ -453,7 +453,7 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Unsmoothed data'),
+                                                html.H3('Raw data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownSA1',
                                                         options=[{'label': i, 'value': i} for i in list_of_images_s_america_un],
