@@ -42,29 +42,29 @@ list_of_images_oceania_s5 = sorted([f.name for f in image_directory_oceania_s5.r
 static_image_route_oceania_s5 = '/staticOCS5/'
 
 
-image_directory_s_america_s3 = scriptdir / 'plots/South_America/SMO3'
-list_of_images_s_america_s3 = sorted([f.name for f in image_directory_s_america_s3.rglob('*.png')])
-static_image_route_s_america_s3 = '/staticSAS3/'
+image_directory_s_america_s1 = scriptdir / 'plots/South_America/SMO1'
+list_of_images_s_america_s1 = sorted([f.name for f in image_directory_s_america_s1.rglob('*.png')])
+static_image_route_s_america_s1 = '/staticSAs1/'
 
-image_directory_n_america_s3 = scriptdir / 'plots/North_America/SMO3'
-list_of_images_n_america_s3 = sorted([f.name for f in image_directory_n_america_s3.rglob('*.png')])
-static_image_route_n_america_s3 = '/staticNAS3/'
+image_directory_n_america_s1 = scriptdir / 'plots/North_America/SMO1'
+list_of_images_n_america_s1 = sorted([f.name for f in image_directory_n_america_s1.rglob('*.png')])
+static_image_route_n_america_s1 = '/staticNAs1/'
 
-image_directory_asia_s3 = scriptdir / 'plots/Asia/SMO3'
-list_of_images_asia_s3 = sorted([f.name for f in image_directory_asia_s3.rglob('*.png')])
-static_image_route_asia_s3 = '/staticASS3/'
+image_directory_asia_s1 = scriptdir / 'plots/Asia/SMO1'
+list_of_images_asia_s1 = sorted([f.name for f in image_directory_asia_s1.rglob('*.png')])
+static_image_route_asia_s1 = '/staticASs1/'
 
-image_directory_europe_s3 = scriptdir / 'plots/Europe/SMO3'
-list_of_images_europe_s3 = sorted([f.name for f in image_directory_europe_s3.rglob('*.png')])
-static_image_route_europe_s3 = '/staticEUS3/'
+image_directory_europe_s1 = scriptdir / 'plots/Europe/SMO1'
+list_of_images_europe_s1 = sorted([f.name for f in image_directory_europe_s1.rglob('*.png')])
+static_image_route_europe_s1 = '/staticEUs1/'
 
-image_directory_africa_s3 = scriptdir / 'plots/Africa/SMO3'
-list_of_images_africa_s3 = sorted([f.name for f in image_directory_africa_s3.rglob('*.png')])
-static_image_route_africa_s3 = '/staticAFS3/'
+image_directory_africa_s1 = scriptdir / 'plots/Africa/SMO1'
+list_of_images_africa_s1 = sorted([f.name for f in image_directory_africa_s1.rglob('*.png')])
+static_image_route_africa_s1 = '/staticAFs1/'
 
-image_directory_oceania_s3 = scriptdir / 'plots/Oceania/SMO3'
-list_of_images_oceania_s3 = sorted([f.name for f in image_directory_oceania_s3.rglob('*.png')])
-static_image_route_oceania_s3 = '/staticOCS3/'
+image_directory_oceania_s1 = scriptdir / 'plots/Oceania/SMO1'
+list_of_images_oceania_s1 = sorted([f.name for f in image_directory_oceania_s1.rglob('*.png')])
+static_image_route_oceania_s1 = '/staticOCs1/'
 
 image_directory_s_america_un = scriptdir / 'plots/South_America/UNSM'
 list_of_images_s_america_un = sorted([f.name for f in image_directory_s_america_un.rglob('*.png')])
@@ -229,12 +229,12 @@ app.layout =  html.Div([
                                         xs=6,
                                         lg=6,
                                         children=[
-                                            html.H3('Raw data'),
+                                            html.H3('Smooth-5 data'),
                                                 dcc.Dropdown(
                                                     id='image-dropdownAfrica1',
-                                                    options=[{'label': i, 'value': i} for i in list_of_images_africa_un],
+                                                    options=[{'label': i, 'value': i} for i in list_of_images_africa_s5],
                                                     placeholder="Select Country",
-                                                    value=list_of_images_africa_un[0],
+                                                    value=list_of_images_africa_s5[0],
                                                     style=dict(
                                                        width='90%',
                                                        #display='inline-block',
@@ -252,12 +252,12 @@ app.layout =  html.Div([
                                         xs=6,
                                         lg=6,
                                         children=[                                                      
-                                            html.H3('Raw data'),
+                                            html.H3('Smooth-5 data'),
                                                 dcc.Dropdown(
                                                     id='image-dropdownAfrica2',
-                                                    options=[{'label': i, 'value': i} for i in list_of_images_africa_un],
+                                                    options=[{'label': i, 'value': i} for i in list_of_images_africa_s5],
                                                     placeholder="Select Country",
-                                                    value=list_of_images_africa_un[0],
+                                                    value=list_of_images_africa_s5[0],
                                                     style=dict(
                                                        width='90%',
                                                        #display='inline-block',
@@ -279,12 +279,12 @@ app.layout =  html.Div([
                                         xs=6,
                                         lg=6,
                                         children=[
-                                            html.H3('Smooth-3'),
+                                            html.H3('Raw data'),
                                                 dcc.Dropdown(
                                                     id='image-dropdownAfrica3',
-                                                    options=[{'label': i, 'value': i} for i in list_of_images_africa_s3],
+                                                    options=[{'label': i, 'value': i} for i in list_of_images_africa_un],
                                                     placeholder="Select Country",
-                                                    value=list_of_images_africa_s3[0],
+                                                    value=list_of_images_africa_un[0],
                                                     style=dict(
                                                        width='90%',
                                                        #display='inline-block',
@@ -301,12 +301,12 @@ app.layout =  html.Div([
                                         xs=6,
                                         lg=6,
                                         children=[                                                      
-                                            html.H3('Smooth-3'),
+                                            html.H3('Raw data'),
                                                 dcc.Dropdown(
                                                     id='image-dropdownAfrica4',
-                                                    options=[{'label': i, 'value': i} for i in list_of_images_africa_s3],
+                                                    options=[{'label': i, 'value': i} for i in list_of_images_africa_un],
                                                     placeholder="Select Country",
-                                                    value=list_of_images_africa_s3[0],
+                                                    value=list_of_images_africa_un[0],
                                                     style=dict(
                                                        width='90%',
                                                        #display='inline-block',
@@ -328,12 +328,12 @@ app.layout =  html.Div([
                                         xs=6,
                                         lg=6,
                                         children=[
-                                            html.H3('Smooth-5'),
+                                            html.H3('Smooth-1'),
                                                 dcc.Dropdown(
                                                     id='image-dropdownAfrica5',
-                                                    options=[{'label': i, 'value': i} for i in list_of_images_africa_s5],
+                                                    options=[{'label': i, 'value': i} for i in list_of_images_africa_s1],
                                                     placeholder="Select Country",
-                                                    value=list_of_images_africa_s5[0],
+                                                    value=list_of_images_africa_un[0],
                                                     style=dict(
                                                        width='90%',
                                                        #display='inline-block',
@@ -350,12 +350,12 @@ app.layout =  html.Div([
                                         xs=6,
                                         lg=6,
                                         children=[                                                      
-                                            html.H3('Smooth-5'),
+                                            html.H3('Smooth-1'),
                                                 dcc.Dropdown(
                                                     id='image-dropdownAfrica6',
-                                                    options=[{'label': i, 'value': i} for i in list_of_images_africa_s5],
+                                                    options=[{'label': i, 'value': i} for i in list_of_images_africa_s1],
                                                     placeholder="Select Country",
-                                                    value=list_of_images_africa_s5[0],
+                                                    value=list_of_images_africa_s1[0],
                                                     style=dict(
                                                        width='90%',
                                                        #display='inline-block',
@@ -390,12 +390,12 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Raw data'),
+                                                    html.H3('Smooth-5'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownAS1',
-                                                        options=[{'label': i, 'value': i} for i in list_of_images_asia_un],
+                                                        options=[{'label': i, 'value': i} for i in list_of_images_asia_s5],
                                                         placeholder="Select Country",
-                                                        value=list_of_images_asia_un[0],
+                                                        value=list_of_images_asia_s5[0],
                                                         style=dict(
                                                            width='90%',
                                                            #display='inline-block',
@@ -411,12 +411,12 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Raw data'),
+                                                html.H3('Smooth-5'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownAS2',
-                                                        options=[{'label': i, 'value': i} for i in list_of_images_asia_un],
+                                                        options=[{'label': i, 'value': i} for i in list_of_images_asia_s5],
                                                         placeholder="Select Country",
-                                                        value=list_of_images_asia_un[0],
+                                                        value=list_of_images_asia_s5[0],
                                                         style=dict(
                                                            width='90%',
                                                            #display='inline-block',
@@ -438,12 +438,12 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Smooth-3 data'),
+                                                html.H3('Raw data'),
                                                     dcc.Dropdown(
-                                                        id='image-dropdownAS3',
-                                                        options=[{'label': i, 'value': i} for i in list_of_images_asia_s3],
+                                                        id='image-dropdownAs1',
+                                                        options=[{'label': i, 'value': i} for i in list_of_images_asia_un],
                                                         placeholder="Select Country",
-                                                        value=list_of_images_asia_s3[0],
+                                                        value=list_of_images_asia_un[0],
                                                         style=dict(
                                                            width='90%',
                                                            #display='inline-block',
@@ -459,12 +459,12 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Smooth-3 data'),
+                                                html.H3('Raw data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownAS4',
-                                                        options=[{'label': i, 'value': i} for i in list_of_images_asia_s3],
+                                                        options=[{'label': i, 'value': i} for i in list_of_images_asia_un],
                                                         placeholder="Select Country",
-                                                        value=list_of_images_asia_s3[0],
+                                                        value=list_of_images_asia_un[0],
                                                         style=dict(
                                                            width='90%',
                                                            #display='inline-block',
@@ -486,12 +486,12 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Smooth-5 data'),
+                                                html.H3('Smooth-1 data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownAS5',
-                                                        options=[{'label': i, 'value': i} for i in list_of_images_asia_s5],
+                                                        options=[{'label': i, 'value': i} for i in list_of_images_asia_s1],
                                                         placeholder="Select Country",
-                                                        value=list_of_images_asia_s5[0],
+                                                        value=list_of_images_asia_s1[0],
                                                         style=dict(
                                                            width='90%',
                                                            #display='inline-block',
@@ -507,12 +507,12 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Smooth-5 data'),
+                                                html.H3('Smooth-1 data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownAS6',
-                                                        options=[{'label': i, 'value': i} for i in list_of_images_asia_s5],
+                                                        options=[{'label': i, 'value': i} for i in list_of_images_asia_s1],
                                                         placeholder="Select Country",
-                                                        value=list_of_images_asia_s5[0],
+                                                        value=list_of_images_asia_s1[0],
                                                         style=dict(
                                                            width='90%',
                                                            #display='inline-block',
@@ -547,12 +547,12 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Raw data'),
+                                                html.H3('Smooth-5 data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownEU1',
-                                                        options=[{'label': i, 'value': i} for i in list_of_images_europe_un],
+                                                        options=[{'label': i, 'value': i} for i in list_of_images_europe_s5],
                                                         placeholder="Select Country",
-                                                        value=list_of_images_europe_un[0],
+                                                        value=list_of_images_europe_s5[0],
                                                         style=dict(
                                                            width='90%',
                                                            #display='inline-block',
@@ -568,12 +568,12 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Raw data'),
+                                                html.H3('Smooth-5 data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownEU2',
-                                                        options=[{'label': i, 'value': i} for i in list_of_images_europe_un],
+                                                        options=[{'label': i, 'value': i} for i in list_of_images_europe_s5],
                                                         placeholder="Select Country",
-                                                        value=list_of_images_europe_un[0],
+                                                        value=list_of_images_europe_s5[0],
                                                         style=dict(
                                                            width='90%',
                                                            #display='inline-block',
@@ -595,12 +595,12 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Smooth-3 data'),
+                                                html.H3('Raw data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownEU3',
-                                                        options=[{'label': i, 'value': i} for i in list_of_images_europe_s3],
+                                                        options=[{'label': i, 'value': i} for i in list_of_images_europe_un],
                                                         placeholder="Select Country",
-                                                        value=list_of_images_europe_s3[0],
+                                                        value=list_of_images_europe_un[0],
                                                         style=dict(
                                                            width='90%',
                                                            #display='inline-block',
@@ -616,12 +616,12 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Smooth-3 data'),
+                                                html.H3('Raw data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownEU4',
-                                                        options=[{'label': i, 'value': i} for i in list_of_images_europe_s3],
+                                                        options=[{'label': i, 'value': i} for i in list_of_images_europe_un],
                                                         placeholder="Select Country",
-                                                        value=list_of_images_europe_s3[0],
+                                                        value=list_of_images_europe_un[0],
                                                         style=dict(
                                                            width='90%',
                                                            #display='inline-block',
@@ -643,12 +643,12 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Smooth-5 data'),
+                                                html.H3('Smooth-1 data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownEU5',
-                                                        options=[{'label': i, 'value': i} for i in list_of_images_europe_s5],
+                                                        options=[{'label': i, 'value': i} for i in list_of_images_europe_s1],
                                                         placeholder="Select Country",
-                                                        value=list_of_images_europe_un[0],
+                                                        value=list_of_images_europe_s1[0],
                                                         style=dict(
                                                            width='90%',
                                                            #display='inline-block',
@@ -664,12 +664,12 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Smooth-5 data'),
+                                                html.H3('Smooth-1 data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownEU6',
-                                                        options=[{'label': i, 'value': i} for i in list_of_images_europe_s5],
+                                                        options=[{'label': i, 'value': i} for i in list_of_images_europe_s1],
                                                         placeholder="Select Country",
-                                                        value=list_of_images_europe_s5[0],
+                                                        value=list_of_images_europe_s1[0],
                                                         style=dict(
                                                            width='90%',
                                                            #display='inline-block',
@@ -705,12 +705,12 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Raw data'),
+                                                html.H3('Smooth-5 data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownNA1',
-                                                        options=[{'label': i, 'value': i} for i in list_of_images_n_america_un],
+                                                        options=[{'label': i, 'value': i} for i in list_of_images_n_america_s5],
                                                         placeholder="Select Country",
-                                                        value=list_of_images_n_america_un[0],
+                                                        value=list_of_images_n_america_s5[0],
                                                         style=dict(
                                                            width='90%',
                                                            #display='inline-block',
@@ -725,12 +725,12 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Raw data'),
+                                                html.H3('Smooth-5 data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownNA2',
-                                                        options=[{'label': i, 'value': i} for i in list_of_images_n_america_un],
+                                                        options=[{'label': i, 'value': i} for i in list_of_images_n_america_s5],
                                                         placeholder="Select Country",
-                                                        value=list_of_images_n_america_un[0],
+                                                        value=list_of_images_n_america_s5[0],
                                                         style=dict(
                                                            width='90%',
                                                            #display='inline-block',
@@ -752,12 +752,12 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Smooth-3 data'),
+                                                html.H3('Raw data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownNA3',
-                                                        options=[{'label': i, 'value': i} for i in list_of_images_n_america_s3],
+                                                        options=[{'label': i, 'value': i} for i in list_of_images_n_america_un],
                                                         placeholder="Select Country",
-                                                        value=list_of_images_n_america_s3[0],
+                                                        value=list_of_images_n_america_un[0],
                                                         style=dict(
                                                            width='90%',
                                                            #display='inline-block',
@@ -772,12 +772,12 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Smooth-3 data'),
+                                                html.H3('Raw data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownNA4',
-                                                        options=[{'label': i, 'value': i} for i in list_of_images_n_america_s3],
+                                                        options=[{'label': i, 'value': i} for i in list_of_images_n_america_un],
                                                         placeholder="Select Country",
-                                                        value=list_of_images_n_america_s3[0],
+                                                        value=list_of_images_n_america_un[0],
                                                         style=dict(
                                                            width='90%',
                                                            #display='inline-block',
@@ -799,12 +799,12 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Smooth-5 data'),
+                                                html.H3('Smooth-1 data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownNA5',
-                                                        options=[{'label': i, 'value': i} for i in list_of_images_n_america_s5],
+                                                        options=[{'label': i, 'value': i} for i in list_of_images_n_america_s1],
                                                         placeholder="Select Country",
-                                                        value=list_of_images_n_america_s5[0],
+                                                        value=list_of_images_n_america_s1[0],
                                                         style=dict(
                                                            width='90%',
                                                            #display='inline-block',
@@ -819,12 +819,12 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Smooth-5 data'),
+                                                html.H3('Smooth-1 data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownNA6',
-                                                        options=[{'label': i, 'value': i} for i in list_of_images_n_america_s5],
+                                                        options=[{'label': i, 'value': i} for i in list_of_images_n_america_s1],
                                                         placeholder="Select Country",
-                                                        value=list_of_images_n_america_s5[0],
+                                                        value=list_of_images_n_america_s1[0],
                                                         style=dict(
                                                            width='90%',
                                                            #display='inline-block',
@@ -859,12 +859,12 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Raw data'),
+                                                html.H3('Smooth-5 data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownOC1',
-                                                        options=[{'label': i, 'value': i} for i in list_of_images_oceania_un],
+                                                        options=[{'label': i, 'value': i} for i in list_of_images_oceania_s5],
                                                         placeholder="Select Country",
-                                                        value=list_of_images_oceania_un[0],
+                                                        value=list_of_images_oceania_s5[0],
                                                         style=dict(
                                                            width='90%',
                                                            #display='inline-block',
@@ -880,12 +880,12 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Raw data'),
+                                                html.H3('Smooth-5 data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownOC2',
-                                                        options=[{'label': i, 'value': i} for i in list_of_images_oceania_un],
+                                                        options=[{'label': i, 'value': i} for i in list_of_images_oceania_s5],
                                                         placeholder="Select Country",
-                                                        value=list_of_images_oceania_un[0],
+                                                        value=list_of_images_oceania_s5[0],
                                                         style=dict(
                                                            width='90%',
                                                            #display='inline-block',
@@ -907,12 +907,12 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Smooth-3 data'),
+                                                html.H3('Raw data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownOC3',
-                                                        options=[{'label': i, 'value': i} for i in list_of_images_oceania_s3],
+                                                        options=[{'label': i, 'value': i} for i in list_of_images_oceania_un],
                                                         placeholder="Select Country",
-                                                        value=list_of_images_oceania_s3[0],
+                                                        value=list_of_images_oceania_un[0],
                                                         style=dict(
                                                            width='90%',
                                                            #display='inline-block',
@@ -928,12 +928,12 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Smooth-3 data'),
+                                                html.H3('Raw data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownOC4',
-                                                        options=[{'label': i, 'value': i} for i in list_of_images_oceania_s3],
+                                                        options=[{'label': i, 'value': i} for i in list_of_images_oceania_un],
                                                         placeholder="Select Country",
-                                                        value=list_of_images_oceania_s3[0],
+                                                        value=list_of_images_oceania_un[0],
                                                         style=dict(
                                                            width='90%',
                                                            #display='inline-block',
@@ -955,12 +955,12 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Smooth-5 data'),
+                                                html.H3('Smooth-1 data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownOC5',
-                                                        options=[{'label': i, 'value': i} for i in list_of_images_oceania_s5],
+                                                        options=[{'label': i, 'value': i} for i in list_of_images_oceania_s1],
                                                         placeholder="Select Country",
-                                                        value=list_of_images_oceania_s5[0],
+                                                        value=list_of_images_oceania_s1[0],
                                                         style=dict(
                                                            width='90%',
                                                            #display='inline-block',
@@ -976,12 +976,12 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Smooth-5 data'),
+                                                html.H3('Smooth-1 data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownOC6',
-                                                        options=[{'label': i, 'value': i} for i in list_of_images_oceania_s5],
+                                                        options=[{'label': i, 'value': i} for i in list_of_images_oceania_s1],
                                                         placeholder="Select Country",
-                                                        value=list_of_images_oceania_s5[0],
+                                                        value=list_of_images_oceania_s1[0],
                                                         style=dict(
                                                            width='90%',
                                                            #display='inline-block',
@@ -1016,12 +1016,12 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Raw data'),
+                                                html.H3('Smooth-5 data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownSA1',
-                                                        options=[{'label': i, 'value': i} for i in list_of_images_s_america_un],
+                                                        options=[{'label': i, 'value': i} for i in list_of_images_s_america_s5],
                                                         placeholder="Select Country",
-                                                        value=list_of_images_s_america_un[0],
+                                                        value=list_of_images_s_america_s5[0],
                                                         style=dict(
                                                            width='90%',
                                                            #display='inline-block',
@@ -1036,12 +1036,12 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Raw data'),
+                                                html.H3('Smooth-5 data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownSA2',
-                                                        options=[{'label': i, 'value': i} for i in list_of_images_s_america_un],
+                                                        options=[{'label': i, 'value': i} for i in list_of_images_s_america_s5],
                                                         placeholder="Select Country",
-                                                        value=list_of_images_s_america_un[0],
+                                                        value=list_of_images_s_america_s5[0],
                                                         style=dict(
                                                            width='90%',
                                                            #display='inline-block',
@@ -1062,12 +1062,12 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Smooth-3 data'),
+                                                html.H3('Raw data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownSA3',
-                                                        options=[{'label': i, 'value': i} for i in list_of_images_s_america_s3],
+                                                        options=[{'label': i, 'value': i} for i in list_of_images_s_america_un],
                                                         placeholder="Select Country",
-                                                        value=list_of_images_s_america_s3[0],
+                                                        value=list_of_images_s_america_un[0],
                                                         style=dict(
                                                            width='90%',
                                                            #display='inline-block',
@@ -1082,12 +1082,12 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Smooth-3 data'),
+                                                html.H3('Raw data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownSA4',
-                                                        options=[{'label': i, 'value': i} for i in list_of_images_s_america_s3],
+                                                        options=[{'label': i, 'value': i} for i in list_of_images_s_america_un],
                                                         placeholder="Select Country",
-                                                        value=list_of_images_s_america_s3[0],
+                                                        value=list_of_images_s_america_un[0],
                                                         style=dict(
                                                            width='90%',
                                                            #display='inline-block',
@@ -1108,12 +1108,12 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Smooth-5 data'),
+                                                html.H3('Smooth-1 data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownSA5',
-                                                        options=[{'label': i, 'value': i} for i in list_of_images_s_america_s5],
+                                                        options=[{'label': i, 'value': i} for i in list_of_images_s_america_s1],
                                                         placeholder="Select Country",
-                                                        value=list_of_images_s_america_s5[0],
+                                                        value=list_of_images_s_america_s1[0],
                                                         style=dict(
                                                            width='90%',
                                                            #display='inline-block',
@@ -1128,12 +1128,12 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Smooth-5 data'),
+                                                html.H3('Smooth-1 data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownSA6',
-                                                        options=[{'label': i, 'value': i} for i in list_of_images_s_america_s5],
+                                                        options=[{'label': i, 'value': i} for i in list_of_images_s_america_s1],
                                                         placeholder="Select Country",
-                                                        value=list_of_images_s_america_s5[0],
+                                                        value=list_of_images_s_america_s1[0],
                                                         style=dict(
                                                            width='90%',
                                                            #display='inline-block',
@@ -1170,42 +1170,42 @@ app.layout =  html.Div([
     [dash.dependencies.Input('image-dropdownAfrica1', 'value')]
 )
 def update_image_srcAF1(value):
-    return static_image_route_africa_un + value
+    return static_image_route_africa_s5 + value
 
 @app.callback(
     dash.dependencies.Output('imageafrica2', 'src'),
     [dash.dependencies.Input('image-dropdownAfrica2', 'value')]
 )
 def update_image_srcAF2(value):
-    return static_image_route_africa_un + value
+    return static_image_route_africa_s5 + value
 
 @app.callback(
     dash.dependencies.Output('imageafrica3', 'src'),
     [dash.dependencies.Input('image-dropdownAfrica3', 'value')]
 )
 def update_image_srcAF3(value):
-    return static_image_route_africa_s3 + value
+    return static_image_route_africa_un + value
 
 @app.callback(
     dash.dependencies.Output('imageafrica4', 'src'),
     [dash.dependencies.Input('image-dropdownAfrica4', 'value')]
 )
 def update_image_srcAF4(value):
-    return static_image_route_africa_s3 + value
+    return static_image_route_africa_un + value
 
 @app.callback(
     dash.dependencies.Output('imageafrica5', 'src'),
     [dash.dependencies.Input('image-dropdownAfrica5', 'value')]
 )
 def update_image_srcAF5(value):
-    return static_image_route_africa_s5 + value        
+    return static_image_route_africa_s1 + value        
 
 @app.callback(
     dash.dependencies.Output('imageafrica6', 'src'),
     [dash.dependencies.Input('image-dropdownAfrica6', 'value')]
 )
 def update_image_srcAF6(value):
-    return static_image_route_africa_s5 + value
+    return static_image_route_africa_s1 + value
 
 #Asia
 
@@ -1214,40 +1214,40 @@ def update_image_srcAF6(value):
     [dash.dependencies.Input('image-dropdownAS1', 'value')]
 )
 def update_image_srcAS1(value):
-    return static_image_route_asia_un + value
+    return static_image_route_asia_s5 + value
 
 @app.callback(
     dash.dependencies.Output('imageasia2', 'src'),
     [dash.dependencies.Input('image-dropdownAS2', 'value')]
 )
 def update_image_srcAS2(value):
-    return static_image_route_asia_un + value
+    return static_image_route_asia_s5 + value
 
 @app.callback(
     dash.dependencies.Output('imageasia3', 'src'),
-    [dash.dependencies.Input('image-dropdownAS3', 'value')]
+    [dash.dependencies.Input('image-dropdownAs1', 'value')]
 )
-def update_image_srcAS3(value):
-    return static_image_route_asia_s3 + value
+def update_image_srcAs1(value):
+    return static_image_route_asia_un + value
 @app.callback(
     dash.dependencies.Output('imageasia4', 'src'),
     [dash.dependencies.Input('image-dropdownAS4', 'value')]
 )
 def update_image_srcAS4(value):
-    return static_image_route_asia_s3 + value
+    return static_image_route_asia_un + value
 @app.callback(
     dash.dependencies.Output('imageasia5', 'src'),
     [dash.dependencies.Input('image-dropdownAS5', 'value')]
 )
 def update_image_srcAS5(value):
-    return static_image_route_asia_s5 + value        
+    return static_image_route_asia_s1 + value        
 
 @app.callback(
     dash.dependencies.Output('imageasia6', 'src'),
     [dash.dependencies.Input('image-dropdownAS6', 'value')]
 )
 def update_image_srcAS6(value):
-    return static_image_route_asia_s5 + value
+    return static_image_route_asia_s1 + value
 
 
 #Europe
@@ -1257,40 +1257,40 @@ def update_image_srcAS6(value):
     [dash.dependencies.Input('image-dropdownEU1', 'value')]
 )
 def update_image_srcAS1(value):
-    return static_image_route_europe_un + value
+    return static_image_route_europe_s5 + value
 
 @app.callback(
     dash.dependencies.Output('imageeu2', 'src'),
     [dash.dependencies.Input('image-dropdownEU2', 'value')]
 )
 def update_image_srcAS2(value):
-    return static_image_route_europe_un + value
+    return static_image_route_europe_s5 + value
 
 @app.callback(
     dash.dependencies.Output('imageeu3', 'src'),
     [dash.dependencies.Input('image-dropdownEU3', 'value')]
 )
-def update_image_srcAS3(value):
-    return static_image_route_europe_s3 + value
+def update_image_srcAs1(value):
+    return static_image_route_europe_un + value
 @app.callback(
     dash.dependencies.Output('imageeu4', 'src'),
     [dash.dependencies.Input('image-dropdownEU4', 'value')]
 )
 def update_image_srcAS4(value):
-    return static_image_route_europe_s3 + value
+    return static_image_route_europe_un + value
 @app.callback(
     dash.dependencies.Output('imageeu5', 'src'),
     [dash.dependencies.Input('image-dropdownEU5', 'value')]
 )
 def update_image_srcEU5(value):
-    return static_image_route_europe_s5 + value        
+    return static_image_route_europe_s1 + value        
 
 @app.callback(
     dash.dependencies.Output('imageeu6', 'src'),
     [dash.dependencies.Input('image-dropdownEU6', 'value')]
 )
 def update_image_srcEU6(value):
-    return static_image_route_europe_s5 + value
+    return static_image_route_europe_s1 + value
 
 #South America
 
@@ -1299,40 +1299,40 @@ def update_image_srcEU6(value):
     [dash.dependencies.Input('image-dropdownSA1', 'value')]
 )
 def update_image_srcSA1(value):
-    return static_image_route_s_america_un + value
+    return static_image_route_s_america_s5 + value
 
 @app.callback(
     dash.dependencies.Output('imagesa2', 'src'),
     [dash.dependencies.Input('image-dropdownSA2', 'value')]
 )
 def update_image_srcSA2(value):
-    return static_image_route_s_america_un + value
+    return static_image_route_s_america_s5 + value
 
 @app.callback(
     dash.dependencies.Output('imagesa3', 'src'),
     [dash.dependencies.Input('image-dropdownSA3', 'value')]
 )
 def update_image_srcSA3(value):
-    return static_image_route_s_america_s3 + value
+    return static_image_route_s_america_un + value
 @app.callback(
     dash.dependencies.Output('imagesa4', 'src'),
     [dash.dependencies.Input('image-dropdownSA4', 'value')]
 )
 def update_image_srcSA4(value):
-    return static_image_route_s_america_s3 + value
+    return static_image_route_s_america_un + value
 @app.callback(
     dash.dependencies.Output('imagesa5', 'src'),
     [dash.dependencies.Input('image-dropdownSA5', 'value')]
 )
 def update_image_srcSA5(value):
-    return static_image_route_s_america_s5 + value        
+    return static_image_route_s_america_s1 + value        
 
 @app.callback(
     dash.dependencies.Output('imagesa6', 'src'),
     [dash.dependencies.Input('image-dropdownSA6', 'value')]
 )
 def update_image_srcSA6(value):
-    return static_image_route_s_america_s5 + value
+    return static_image_route_s_america_s1 + value
 
 #North America
 
@@ -1341,40 +1341,40 @@ def update_image_srcSA6(value):
     [dash.dependencies.Input('image-dropdownNA1', 'value')]
 )
 def update_image_srcNA1(value):
-    return static_image_route_n_america_un + value
+    return static_image_route_n_america_s5 + value
 
 @app.callback(
     dash.dependencies.Output('imagena2', 'src'),
     [dash.dependencies.Input('image-dropdownNA2', 'value')]
 )
 def update_image_srcNA2(value):
-    return static_image_route_n_america_un + value
+    return static_image_route_n_america_s5 + value
 
 @app.callback(
     dash.dependencies.Output('imagena3', 'src'),
     [dash.dependencies.Input('image-dropdownNA3', 'value')]
 )
 def update_image_srcNA3(value):
-    return static_image_route_n_america_s3 + value
+    return static_image_route_n_america_un + value
 @app.callback(
     dash.dependencies.Output('imagena4', 'src'),
     [dash.dependencies.Input('image-dropdownNA4', 'value')]
 )
 def update_image_srcNA4(value):
-    return static_image_route_n_america_s3 + value
+    return static_image_route_n_america_un + value
 @app.callback(
     dash.dependencies.Output('imagena5', 'src'),
     [dash.dependencies.Input('image-dropdownNA5', 'value')]
 )
 def update_image_srcNA5(value):
-    return static_image_route_n_america_s5 + value        
+    return static_image_route_n_america_s1 + value        
 
 @app.callback(
     dash.dependencies.Output('imagena6', 'src'),
     [dash.dependencies.Input('image-dropdownNA6', 'value')]
 )
 def update_image_srcNA6(value):
-    return static_image_route_n_america_s5 + value
+    return static_image_route_n_america_s1 + value
 
 #Oceania
 
@@ -1383,40 +1383,40 @@ def update_image_srcNA6(value):
     [dash.dependencies.Input('image-dropdownOC1', 'value')]
 )
 def update_image_srcOC1(value):
-    return static_image_route_oceania_un + value
+    return static_image_route_oceania_s5 + value
 
 @app.callback(
     dash.dependencies.Output('imageoceania2', 'src'),
     [dash.dependencies.Input('image-dropdownOC2', 'value')]
 )
 def update_image_srcOC2(value):
-    return static_image_route_oceania_un + value
+    return static_image_route_oceania_s5 + value
 
 @app.callback(
     dash.dependencies.Output('imageoceania3', 'src'),
     [dash.dependencies.Input('image-dropdownOC3', 'value')]
 )
 def update_image_srcOC3(value):
-    return static_image_route_oceania_s3 + value
+    return static_image_route_oceania_un + value
 @app.callback(
     dash.dependencies.Output('imageoceania4', 'src'),
     [dash.dependencies.Input('image-dropdownOC4', 'value')]
 )
 def update_image_srcOC4(value):
-    return static_image_route_oceania_s3 + value
+    return static_image_route_oceania_un + value
 @app.callback(
     dash.dependencies.Output('imageoceania5', 'src'),
     [dash.dependencies.Input('image-dropdownOC5', 'value')]
 )
 def update_image_srcOC5(value):
-    return static_image_route_oceania_s5 + value        
+    return static_image_route_oceania_s1 + value        
 
 @app.callback(
     dash.dependencies.Output('imageoceania6', 'src'),
     [dash.dependencies.Input('image-dropdownOC6', 'value')]
 )
 def update_image_srcOC6(value):
-    return static_image_route_oceania_s5 + value
+    return static_image_route_oceania_s1 + value
 
 
 # Add a static image route that serves images from desktop
@@ -1430,12 +1430,12 @@ def serve_imageAF_un(image_path):
         raise Exception('"{}" is excluded from the allowed static files'.format(image_path))
     return flask.send_from_directory(image_directory_africa_un, image_name)
 
-@app.server.route('{}<image_path>.png'.format(static_image_route_africa_s3))
-def serve_imageAF_s3(image_path):
+@app.server.route('{}<image_path>.png'.format(static_image_route_africa_s1))
+def serve_imageAF_s1(image_path):
     image_name = '{}.png'.format(image_path)
-    if image_name not in list_of_images_africa_s3:
+    if image_name not in list_of_images_africa_s1:
         raise Exception('"{}" is excluded from the allowed static files'.format(image_path))
-    return flask.send_from_directory(image_directory_africa_s3, image_name)
+    return flask.send_from_directory(image_directory_africa_s1, image_name)
 
 
 @app.server.route('{}<image_path>.png'.format(static_image_route_africa_s5))
@@ -1454,12 +1454,12 @@ def serve_imageAS_un(image_path):
         raise Exception('"{}" is excluded from the allowed static files'.format(image_path))
     return flask.send_from_directory(image_directory_asia_un, image_name)
 
-@app.server.route('{}<image_path>.png'.format(static_image_route_asia_s3))
-def serve_imageAS_s3(image_path):
+@app.server.route('{}<image_path>.png'.format(static_image_route_asia_s1))
+def serve_imageAS_s1(image_path):
     image_name = '{}.png'.format(image_path)
-    if image_name not in list_of_images_asia_s3:
+    if image_name not in list_of_images_asia_s1:
         raise Exception('"{}" is excluded from the allowed static files'.format(image_path))
-    return flask.send_from_directory(image_directory_asia_s3, image_name)
+    return flask.send_from_directory(image_directory_asia_s1, image_name)
 
 
 @app.server.route('{}<image_path>.png'.format(static_image_route_asia_s5))
@@ -1478,12 +1478,12 @@ def serve_imageNA_un(image_path):
         raise Exception('"{}" is excluded from the allowed static files'.format(image_path))
     return flask.send_from_directory(image_directory_n_america_un, image_name)
 
-@app.server.route('{}<image_path>.png'.format(static_image_route_n_america_s3))
-def serve_imageNA_s3(image_path):
+@app.server.route('{}<image_path>.png'.format(static_image_route_n_america_s1))
+def serve_imageNA_s1(image_path):
     image_name = '{}.png'.format(image_path)
-    if image_name not in list_of_images_n_america_s3:
+    if image_name not in list_of_images_n_america_s1:
         raise Exception('"{}" is excluded from the allowed static files'.format(image_path))
-    return flask.send_from_directory(image_directory_n_america_s3, image_name)
+    return flask.send_from_directory(image_directory_n_america_s1, image_name)
 
 
 @app.server.route('{}<image_path>.png'.format(static_image_route_n_america_s5))
@@ -1501,12 +1501,12 @@ def serve_imageSA_un(image_path):
         raise Exception('"{}" is excluded from the allowed static files'.format(image_path))
     return flask.send_from_directory(image_directory_s_america_un, image_name)
 
-@app.server.route('{}<image_path>.png'.format(static_image_route_s_america_s3))
-def serve_imageSA_s3(image_path):
+@app.server.route('{}<image_path>.png'.format(static_image_route_s_america_s1))
+def serve_imageSA_s1(image_path):
     image_name = '{}.png'.format(image_path)
     if image_name not in list_of_images_s_america_s5:
         raise Exception('"{}" is excluded from the allowed static files'.format(image_path))
-    return flask.send_from_directory(image_directory_s_america_s3, image_name)
+    return flask.send_from_directory(image_directory_s_america_s1, image_name)
 
 @app.server.route('{}<image_path>.png'.format(static_image_route_s_america_s5))
 def serve_imageSA_s5(image_path):
@@ -1522,12 +1522,12 @@ def serve_imageEU_un(image_path):
         raise Exception('"{}" is excluded from the allowed static files'.format(image_path))
     return flask.send_from_directory(image_directory_europe_un, image_name)
 
-@app.server.route('{}<image_path>.png'.format(static_image_route_europe_s3))
-def serve_imageEU_s3(image_path):
+@app.server.route('{}<image_path>.png'.format(static_image_route_europe_s1))
+def serve_imageEU_s1(image_path):
     image_name = '{}.png'.format(image_path)
-    if image_name not in list_of_images_europe_s3:
+    if image_name not in list_of_images_europe_s1:
         raise Exception('"{}" is excluded from the allowed static files'.format(image_path))
-    return flask.send_from_directory(image_directory_europe_s3, image_name)
+    return flask.send_from_directory(image_directory_europe_s1, image_name)
 
 
 @app.server.route('{}<image_path>.png'.format(static_image_route_europe_s5))
@@ -1544,12 +1544,12 @@ def serve_imageOC_un(image_path):
         raise Exception('"{}" is excluded from the allowed static files'.format(image_path))
     return flask.send_from_directory(image_directory_oceania_un, image_name)
 
-@app.server.route('{}<image_path>.png'.format(static_image_route_oceania_s3))
-def serve_imageOC_s3(image_path):
+@app.server.route('{}<image_path>.png'.format(static_image_route_oceania_s1))
+def serve_imageOC_s1(image_path):
     image_name = '{}.png'.format(image_path)
-    if image_name not in list_of_images_oceania_s3:
+    if image_name not in list_of_images_oceania_s1:
         raise Exception('"{}" is excluded from the allowed static files'.format(image_path))
-    return flask.send_from_directory(image_directory_oceania_s3, image_name)
+    return flask.send_from_directory(image_directory_oceania_s1, image_name)
 
 @app.server.route('{}<image_path>.png'.format(static_image_route_oceania_s5))
 def serve_imageOC_s5(image_path):
