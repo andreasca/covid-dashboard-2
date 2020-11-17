@@ -46,31 +46,31 @@ list_of_images_oceania_s5 = sorted([f.name for f in image_directory_oceania_s5.r
 static_image_route_oceania_s5 = '/staticOCS5/'
 
 
-image_directory_s_america_s1 = scriptdir / 'plots/South_America/SMO1'
+image_directory_s_america_s1 = scriptdir / 'plots/South_America/SMO0'
 list_of_images_s_america_s1 = sorted([f.name for f in image_directory_s_america_s1.rglob('*.png')])
 static_image_route_s_america_s1 = '/staticSAs1/'
 
-image_directory_n_america_s1 = scriptdir / 'plots/North_America/SMO1'
+image_directory_n_america_s1 = scriptdir / 'plots/North_America/SMO0'
 list_of_images_n_america_s1 = sorted([f.name for f in image_directory_n_america_s1.rglob('*.png')])
 static_image_route_n_america_s1 = '/staticNAs1/'
 
-image_directory_asia_s1 = scriptdir / 'plots/Asia/SMO1'
+image_directory_asia_s1 = scriptdir / 'plots/Asia/SMO0'
 list_of_images_asia_s1 = sorted([f.name for f in image_directory_asia_s1.rglob('*.png')])
 static_image_route_asia_s1 = '/staticASs1/'
 
-image_directory_europe_s1 = scriptdir / 'plots/Europe/SMO1'
+image_directory_europe_s1 = scriptdir / 'plots/Europe/SMO0'
 list_of_images_europe_s1 = sorted([f.name for f in image_directory_europe_s1.rglob('*.png')])
 static_image_route_europe_s1 = '/staticEUs1/'
 
-image_directory_africa_s1 = scriptdir / 'plots/Africa/SMO1'
+image_directory_africa_s1 = scriptdir / 'plots/Africa/SMO0'
 list_of_images_africa_s1 = sorted([f.name for f in image_directory_africa_s1.rglob('*.png')])
 static_image_route_africa_s1 = '/staticAFs1/'
 
-# image_directory_oceania_s1 = scriptdir / 'plots/Oceania/SMO1'
+# image_directory_oceania_s1 = scriptdir / 'plots/Oceania/SMO0'
 # list_of_images_oceania_s1 = sorted([f.name for f in image_directory_oceania_s1.rglob('*.png')])
 # static_image_route_oceania_s1 = '/staticOCs1/'
 
-image_directory_oceania_s1 = scriptdir / 'plots/World/SMO1'
+image_directory_oceania_s1 = scriptdir / 'plots/World/SMO0'
 list_of_images_oceania_s1 = sorted([f.name for f in image_directory_oceania_s1.rglob('*.png')])
 static_image_route_oceania_s1 = '/staticOCs1/'
 
@@ -339,7 +339,7 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Smooth-1 data'),
+                                                html.H3('ROLL7 data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownAS5',
                                                         options=[{'label': i, 'value': i} for i in list_of_images_asia_s1],
@@ -360,7 +360,7 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Smooth-1 data'),
+                                                html.H3('ROLL7 data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownAS6',
                                                         options=[{'label': i, 'value': i} for i in list_of_images_asia_s1],
@@ -496,7 +496,7 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Smooth-1 data'),
+                                                html.H3('ROLL7 data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownEU5',
                                                         options=[{'label': i, 'value': i} for i in list_of_images_europe_s1],
@@ -517,7 +517,7 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Smooth-1 data'),
+                                                html.H3('ROLL7 data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownEU6',
                                                         options=[{'label': i, 'value': i} for i in list_of_images_europe_s1],
@@ -657,7 +657,7 @@ app.layout =  html.Div([
                                         xs=6,
                                         lg=6,
                                         children=[
-                                            html.H3('Smooth-1'),
+                                            html.H3('ROLL7'),
                                                 dcc.Dropdown(
                                                     id='image-dropdownAfrica5',
                                                     options=[{'label': i, 'value': i} for i in list_of_images_africa_s1],
@@ -679,7 +679,7 @@ app.layout =  html.Div([
                                         xs=6,
                                         lg=6,
                                         children=[                                                      
-                                            html.H3('Smooth-1'),
+                                            html.H3('ROLL7'),
                                                 dcc.Dropdown(
                                                     id='image-dropdownAfrica6',
                                                     options=[{'label': i, 'value': i} for i in list_of_images_africa_s1],
@@ -813,7 +813,7 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Smooth-1 data'),
+                                                html.H3('ROLL7 data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownNA5',
                                                         options=[{'label': i, 'value': i} for i in list_of_images_n_america_s1],
@@ -833,7 +833,7 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Smooth-1 data'),
+                                                html.H3('ROLL7 data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownNA6',
                                                         options=[{'label': i, 'value': i} for i in list_of_images_n_america_s1],
@@ -966,7 +966,7 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Smooth-1 data'),
+                                                html.H3('ROLL7 data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownSA5',
                                                         options=[{'label': i, 'value': i} for i in list_of_images_s_america_s1],
@@ -986,7 +986,7 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Smooth-1 data'),
+                                                html.H3('ROLL7 data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownSA6',
                                                         options=[{'label': i, 'value': i} for i in list_of_images_s_america_s1],
@@ -1121,7 +1121,7 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Smooth-1 data'),
+                                                html.H3('ROLL7 data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownOC5',
                                                         options=[{'label': i, 'value': i} for i in list_of_images_oceania_s1],
@@ -1142,7 +1142,7 @@ app.layout =  html.Div([
                                             xs=6,
                                             lg=6,
                                             children=[
-                                                html.H3('Smooth-1 data'),
+                                                html.H3('ROLL7 data'),
                                                     dcc.Dropdown(
                                                         id='image-dropdownOC6',
                                                         options=[{'label': i, 'value': i} for i in list_of_images_oceania_s1],
